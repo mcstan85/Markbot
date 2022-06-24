@@ -90,11 +90,11 @@ buttons = [
         InlineKeyboardButton(text="•ʜᴇʟᴘ & ᴄᴍᴅs​​​•", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="•ᴀʙᴏᴜᴛ ᴍᴇ​​•", callback_data="fallen_"),
-        InlineKeyboardButton(text="•sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ•", callback_data="source_"),
+        InlineKeyboardButton(text="•ᴄʜᴀɴɴᴇʟ​​•", url=f"https://t.me/love_world135"),
+        InlineKeyboardButton(text="•sᴜᴘᴘᴏʀᴛ•", url=f"https://t.me/marrkmusic"),
     ],
     [
-        InlineKeyboardButton(text="•sᴜᴘᴘᴏʀᴛ•", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="•ᴀʙᴏᴜᴛ ᴍᴇ​​•", callback_data="fallen_"),
         InlineKeyboardButton(
             text="•Mᴏɪ ᴏᴡɴᴇʀ•", url=f"https://t.me/{OWNER_USERNAME}"
         ),
