@@ -101,7 +101,7 @@ Time Zones:- {tom}
 Top Level Domain:- {lanester}
 wikipedia:- {wiki}</b>
 
-Gathered By [FALLEN](t.me/anonymous_was_bot)</b>
+Gathered By [ιɾσɳ ♡](t.me/marrk85)</b>
 """
 
     await borg.send_message(
