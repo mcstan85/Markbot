@@ -26,7 +26,7 @@ async def awake(event):
     BUTTON = [
         [
             Button.url("ʜᴇʟᴘ​", "https://t.me/MarrkXRobot?start=help"),
-            Button.url("sᴜᴘᴘᴏʀᴛ​", "https://t.me/marrkmusic"),
+            Button.url("sᴜᴘᴘᴏʀᴛ​", "https://t.me/CRAXYMARRK"),
         ]
     ]
     ran = random.choice(PHOTO)
