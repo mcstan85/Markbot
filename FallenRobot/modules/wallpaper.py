@@ -1,10 +1,14 @@
-from random import randint
+import os
+import io
+import requests
+from requests import get
+from pyrogram.types import Message
+from FallenRobot import pbot, dispatcher, SUPPORT_CHAT
+from bs4 import *
+from pyrogram import filters
+from PIL import Image
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-import requests as r
-from FallenRobot import SUPPORT_CHAT, WALL_API, dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
-from telegram import Update
-from telegram.ext import CallbackContext, run_async
 
 # Wallpapers module by @TheRealPhoenix using wall.alphacoders.com
 
