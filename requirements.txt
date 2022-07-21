@@ -6,7 +6,7 @@ beautifulsoup4
 requests
 python-telegram-bot==12.8
 youtube_search_python
-sqlalchemy==1.4.11
+sqlalchemy==1.4.39
 PyDictionary
 psycopg2-binary
 feedparser
@@ -29,14 +29,13 @@ wikipedia
 telethon
 telegraph
 heroku3
-nekos.py
 alphabet_detector
 pyrate-limiter
 cachetools
 ujson
 pretty_errors
 TgCrypto
-Pyrogram==1.4.16
+Pyrogram==2.0.33
 youtube_search
 asyncio
 dateparser
