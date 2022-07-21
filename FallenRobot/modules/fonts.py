@@ -256,6 +256,34 @@ linedfont = [
     "𝕪",
     "𝕫",
 ]
+vibefont = [
+    "ᴀ",
+    "ʙ",
+    "ᴄ",
+    "ᴅ",
+    "ᴇ",
+    "ꜰ",
+    "ɢ",
+    "ʜ",
+    "ɪ",
+    "ᴊ",
+    "ᴋ",
+    "ʟ",
+    "ᴍ",
+    "ɴ",
+    "ᴏ",
+    "ᴘ",
+    "Q",
+    "ʀ",
+    "ꜱ",
+    "ᴛ",
+    "ᴜ",
+    "ᴠ",
+    "ᴡ",
+    "x",
+    "ʏ",
+    "ᴢ",
+]
 
 
 @typing_action
@@ -474,6 +502,33 @@ def lined(update, context):
         message.reply_text(string)
 
 
+@typing_action
+def vibe(update, context):
+    args = context.args
+    message = update.effective_message
+    string = ""
+
+    if message.reply_to_message:
+        string = message.reply_to_message.text.lower().replace(" ", "  ")
+
+    if args:
+        string = "  ".join(args).lower()
+
+    if not string:
+        message.reply_text("Usage is `/vibe <text>`", parse_mode=ParseMode.MARKDOWN)
+        return
+
+    for normiecharacter in string:
+        if normiecharacter in normiefont:
+            vibecharacter = vibefont[normiefont.index(normiecharacter)]
+            string = string.replace(normiecharacter, vibecharacter)
+
+    if message.reply_to_message:
+        message.reply_to_message.reply_text(string)
+    else:
+        message.reply_text(string)
+
+
 __help__ = """
 
 *ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ*
@@ -485,6 +540,7 @@ __help__ = """
  ❍ /blue *:* Change the text into blue text.
  ❍ /latin *:* Change the text into latin text.
  ❍ /lined *:* Change the text into lined text.
+ ❍ /vibe *:* Change the text into lined text.
  """
 __mod_name__ = "Fᴏɴᴛ Eᴅɪᴛᴏʀ"
 
@@ -496,6 +552,7 @@ FSQUARE_HANDLER = DisableAbleCommandHandler("fsquare", fsquare)
 BLUE_HANDLER = DisableAbleCommandHandler("blue", blue)
 LATIN_HANDLER = DisableAbleCommandHandler("latin", latin)
 LINED_HANDLER = DisableAbleCommandHandler("lined", lined)
+VIBE_HANDLER = DisableAbleCommandHandler("vibe", vibe)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 dispatcher.add_handler(BUBBLE_HANDLER)
@@ -505,6 +562,7 @@ dispatcher.add_handler(FSQUARE_HANDLER)
 dispatcher.add_handler(BLUE_HANDLER)
 dispatcher.add_handler(LATIN_HANDLER)
 dispatcher.add_handler(LINED_HANDLER)
+dispatcher.add_handler(VIBE_HANDLER)
 
 __command_list__ = ["weebify"]
 __command_list__ = ["bubble"]
@@ -514,6 +572,7 @@ __command_list__ = ["fsquare"]
 __command_list__ = ["blue"]
 __command_list__ = ["latin"]
 __command_list__ = ["lined"]
+__command_list__ = ["vibe"]
 __handlers__ = [WEEBIFY_HANDLER]
 __handlers__ = [BUBBLE_HANDLER]
 __handlers__ = [FBUBBLE_HANDLER]
@@ -522,3 +581,4 @@ __handlers__ = [FSQUARE_HANDLER]
 __handlers__ = [BLUE_HANDLER]
 __handlers__ = [LATIN_HANDLER]
 __handlers__ = [LINED_HANDLER]
+__handlers__ = [VIBE_HANDLER]
