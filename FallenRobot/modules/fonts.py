@@ -540,7 +540,7 @@ __help__ = """
  ❍ /blue *:* Change the text into blue text.
  ❍ /latin *:* Change the text into latin text.
  ❍ /lined *:* Change the text into lined text.
- ❍ /vibe *:* Change the text into lined text.
+ ❍ /vibe *:* Change the text into vibe text.
  """
 __mod_name__ = "Fᴏɴᴛ Eᴅɪᴛᴏʀ"
 
