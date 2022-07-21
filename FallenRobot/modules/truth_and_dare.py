@@ -1,3 +1,5 @@
+import io
+import re
 import html
 import random
 import FallenRobot.modules.truth_and_dare_string as truth_and_dare_string
