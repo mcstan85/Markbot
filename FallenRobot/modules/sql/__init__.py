@@ -24,3 +24,4 @@ except Exception as e:
     exit()
 
 log.info("[PostgreSQL] Connection successful, session started.")
+ 
