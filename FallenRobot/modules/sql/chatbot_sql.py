@@ -46,3 +46,4 @@ def get_all_kuki_chats():
         return SESSION.query(KukiChats.chat_id).all()
     finally:
         SESSION.close()
+ 
